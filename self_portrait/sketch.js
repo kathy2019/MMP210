@@ -1,41 +1,42 @@
-// self portraiit
-
-function setup() {
-
-	createCanvas(600, 400);
+// self portrait 
+ 
+	function setup() {
+	createCanvas(640, 360);
 }
-
 
 function draw() {
+	background("white");
+	noStroke();
+	
+	// face
+	fill("plum");
+	ellipse(200, 180, 350, 350);
+	
+	// eyes
+	fill("navy");
+	strokeWeight(5);
+	ellipse(150, 150, 70, 70);
+	ellipse(250, 150, 70, 70);
+	fill("lavender");
+	arc(200, 250, 100, 100, 0, PI)
+	
+	// pupils
+	fill("lavender");
+	ellipse(150, 150, 30, 30);
+	ellipse(250, 150, 30, 30);
 
-	background("LAVENDER");
-
-	fill("blue")
-	rect(1, 200, 800, 200); // Right bottom box of the Dom.Rep
-	stroke("white")
-	noFill();
-	strokeWeight(9);
-
-
-	fill("red") 
-	rect(1, 200, 290, 200); //Left bottom box
-	stroke("white")
-	noFill();
-	strokeWeight(9);
-
-
-	fill("blue")
-	rect(1, 1, 290, 200); // Left top box
-	stroke("white")
-	noFill();
-	strokeWeight(9)
-
-	fill("red")
-	rect(290, 1, 350, 200);
-	stroke("white")
-	noFill();
-	strokeWeight(9)
+	// mouth
+	stroke("navy");
+	noFill()
+	strokeWeight(5);
+	arc(200, 250, 100, 100, 0, PI)
 
 
 
 }
+
+
+
+
+
+
