@@ -1,45 +1,42 @@
 // self portraiit with variables
 
-var faceSize = 400;
 
 function setup() {
+	createCanvas(640, 360);
+	background("lavender");
 
-	createCanvas(600, 400);
-}
-
-
-function draw() {
-
-	background("LAVENDER");
-
-	fill("blue")
-	rect(1, 200, 800, 200); // Right bottom box of the Dom.Rep
-	stroke("white")
-	noFill();
-	strokeWeight(9);
+	var eyeSize = 30;
+	var faceColor = "lavender";
 
 
-	fill("red") 
-	rect(1, 200, 290, 200); //Left bottom box
-	stroke("white")
-	noFill();
-	strokeWeight(9);
+	noStroke();
+	fill(faceColor);
+	ellipse(200, 200, 350, 350); // face
 
+	
+	// face
+	fill("plum");
+	ellipse(200, 180, 200, 200);
+	
+	// eyes
+	fill("navy");
+	ellipse(150, 150, eyeSize); // left eye
+	ellipse(250, 150, eyeSize); // right eye
+	fill("lavender");
+	arc(400, 250, 100, 100, 0, PI)
+	
+	// pupils
+	fill(faceColor);
+	ellipse(150, 150, eyeSize / 2); // left pupil
+	ellipse(250, 150, eyeSize / 2); // right pupil
 
-	fill("blue")
-	rect(1, 1, 290, 200); // Left top box
-	stroke("white")
-	noFill();
-	strokeWeight(9)
+	// mouth
+	stroke("navy");
+	noFill()
+	strokeWeight(2);
+	fill("lavender");
+	arc(200, 210, 100, 100, 0, PI)
 
-	fill("red")
-	rect(290, 1, 350, 200);
-	stroke("white")
-	noFill();
-	strokeWeight(9)
-
-	fill("white")
-	ellipse(300, 200, faceSize, faceSize/2);
 
 
 
