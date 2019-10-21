@@ -12,12 +12,12 @@ function setup (){
 function draw (){
 	background ("firebrick");
 
-	textSize(60);
+	textSize(80);
 	fill("white");
 	strokeWeight(15);
 	textStyle("Normal");
 	textDont("helvetica");
 	textAlign("center");
-	text("When you consider your puppy a baby");
+	text("When you are relaxed");
 }
 
