@@ -16,8 +16,8 @@ function draw (){
 
 	
 	background ("white");
-	image(puppy, 150, 50, width, height);
-	textSize(25);
+	image(puppy, 100, 50, width, height);
+	textSize(45);
 	fill("white")
 	textAlign(CENTER);
 	text("When you are relaxed", 500, 100);
