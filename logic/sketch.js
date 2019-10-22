@@ -1,8 +1,8 @@
 // Meme 
  
-var puppy;
+var drunk;
 	function preload(){
-		puupy=loadImage("puppy_beer_remote.jpg")
+		drunk = loadImage("drunk.jpg")
 	}
 
 function setup (){
