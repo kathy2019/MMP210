@@ -8,7 +8,7 @@ var Puppy, pup;
 
 function setup (){
 
-	 var canvas = createCanvas(640,640);
+	 var canvas = createCanvas(640,700);
 	 canvas.drawingContext.miterLimit = 2;
 
 	 x = width - 50;
@@ -27,28 +27,33 @@ function draw (){
 
 	
 	image(Puppy, 0, PuppyY, width, height/2);
-	image(pup, 0, pupY, width, height/2);	
+	image(pup, 0, pupY, width, height/2);
+
 
 	var caption = "I'm a puppy";
 
+	Puppy(Puppy, mouseX, mouseY);
+
 
 	if (mouseX > width/2 && mouseY < height/2){
-			caption = "I'm chilling";	
+			caption = "I'm chilling!";	
 		} else if (mouseX < width/2 && mouseY > height/2){
-			caption = "Tired";
+			caption = "Tired!";
 		} else if (mouseY > height/2){
 			caption = "See Ya!";
 		}
 		
 		
-		textAlign(RIGHT);
+		textAlign(CENTER);
 		// var caption = "I'm relaxed";
+
+		
 
 	
 
 
 		textAlign(CENTER, CENTER);
-		textSize(50);
+		textSize(75);
 		textFont("Helvetica");
 		fill("white");
 		stroke("black");
