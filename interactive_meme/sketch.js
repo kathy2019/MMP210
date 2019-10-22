@@ -1,14 +1,18 @@
 
-var puppy, kitten;
+var Puppy, pup;
 
 	function preload(){
-		puppy = loadImage("puppy.jpg");
-		pupyy2 = loadImage("puppy2.jpg");
+		Puppy = loadImage("Puppy.jpg");
+		pup = loadImage("pup.jpg");
 	}
 
 function setup (){
 
-	 var canvas = (640,350);
+	 var canvas = createCanvas(640,640);
+	 canvas.drawingContext.miterLimit = 2;
+
+	 x = width - 50;
+	 y = 20;
 	 
 
 }
@@ -18,26 +22,29 @@ function draw (){
 
 	background ("black");
 
-	if (mouseIsPressed){
-		image(puppy, 200, 200, width, height/2);
-		image(kitten, 0, height/2, width, height/2);
-	} else {
-		image(puppy, 0, 0, 500, 650);
-		image(kitten, 0, 0, width, height/2);
-		
-		textAlign(RIGHT);
-		var caption = "I'm relaxed";
+	var PuppyY = 0;
+	var pupY = height/2;
 
-		if (mouseX > width/2 && mouseY < height/2){
+	
+	image(Puppy, 0, PuppyY, width, height/2);
+	image(pup, 0, pupY, width, height/2);	
 
-			caption = "Chilling";
+	var caption = "I'm a puppy";
+
+
+	if (mouseX > width/2 && mouseY < height/2){
+			caption = "I'm chilling";	
 		} else if (mouseX < width/2 && mouseY > height/2){
-
-			caption = "Heyy";
-
-		} else if (mouseY > height/2) {
+			caption = "Tired";
+		} else if (mouseY > height/2){
 			caption = "See Ya!";
 		}
+		
+		
+		textAlign(RIGHT);
+		// var caption = "I'm relaxed";
+
+	
 
 
 		textAlign(CENTER, CENTER);
@@ -49,11 +56,9 @@ function draw (){
 
 		text(caption, width/2, height/2);
 
-
 	}
+	
+	
+	
 
-	
-	
-	
-}
 
