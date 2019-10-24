@@ -1,8 +1,8 @@
 
-var puppy;
+var Puppy;
 
 	function preload(){
-		puppy = loadImage("Puppy.jpg")
+		Puppy = loadImage("Puppy.jpg")
 	}
 
 function setup (){
@@ -16,7 +16,7 @@ function draw (){
 
 	
 	background ("black");
-	image(puppy, 100, 50, width, height);
+	image(Puppy,50, 50,);
 	textSize(45);
 	fill("white")
 	textAlign(CENTER);
