@@ -1,5 +1,8 @@
 
 var Puppy, pup;
+var PuppyX = 0;
+var textStroke = 8;
+var textStrokeSpeed = 1;
 
 	function preload(){
 		Puppy = loadImage("Puppy.jpg");
@@ -25,6 +28,9 @@ function draw (){
 	var PuppyY = 0;
 	var pupY = height/2;
 
+	var PuppyY = 0;
+	var pupY = height/2;
+
 	
 	image(Puppy, 0, PuppyY, width, height/2);
 	image(pup, 0, pupY, width, height/2);
@@ -32,7 +38,7 @@ function draw (){
 
 	var caption = "I'm a puppy";
 
-	Puppy(Puppy, mouseX, mouseY);
+	image(Puppy, mouseX, mouseY);
 
 
 	if (mouseX > width/2 && mouseY < height/2){
@@ -48,9 +54,6 @@ function draw (){
 		// var caption = "I'm relaxed";
 
 		
-
-	
-
 
 		textAlign(CENTER, CENTER);
 		textSize(70);
