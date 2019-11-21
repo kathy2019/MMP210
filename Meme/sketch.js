@@ -15,7 +15,7 @@ function setup (){
 function draw (){
 
 	
-	background ("black");
+	background ("white");
 	image(Puppy,50, 50,);
 	textSize(45);
 	fill("white")
