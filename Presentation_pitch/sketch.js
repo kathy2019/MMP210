@@ -11,9 +11,11 @@ var prevBtnW = 100;
 var prevBtnH = 50;
 
 var Happyface;
+var Sadface;
 
 function preload() {
     Happyface = loadImage("happyface.jpg");
+    Sadface = loadImage("sademoji.jpg")
 }
 
 function setup() {
@@ -53,6 +55,7 @@ function draw() {
         
         // theme
         image(Happyface, 0, 0, width, height);
+        image(Sadface, 0, 0, width, height);
         text("Theme", width/2, height/2);
     }
     
