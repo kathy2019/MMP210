@@ -41,7 +41,7 @@ function draw() {
     } else if (slideNumber == 1) {
         // content for slide number 1
         
-        fill(255);
+        fill("black");
         textSize(50);
         textAlign(CENTER, CENTER);
         text("IR Sensor", width/2, 200);
