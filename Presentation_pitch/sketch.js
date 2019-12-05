@@ -86,11 +86,11 @@ function draw() {
     if (slideNumber > 0) {
        fill(255);
         noStroke();
-        ellipse(prevBtnX, prevBtnY, prevBtnW, prevBtnH);
+        ellipse(prevBtnX-50, prevBtnY, prevBtnW+20, prevBtnH+20);
         fill(0);
         textSize(16);
         textAlign(CENTER, CENTER);
-        text("Previous", prevBtnX + 10, prevBtnY + 10);  
+        text("Previous", prevBtnX -50, prevBtnY);  
     }
    
     
