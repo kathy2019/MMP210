@@ -13,10 +13,12 @@ var prevBtnSize = 70;
 
 var Happyface;
 var Sadface;
+var sensor;
 
 function preload() {
     Happyface = loadImage("happyface.jpg");
-    Sadface = loadImage("sademoji.jpg")
+    Sadface = loadImage("sademoji.jpg");
+    sensor = loadImage("sensor.jpg");
 }
 
 function setup() {
@@ -45,8 +47,7 @@ function draw() {
         text("IR Sensor", width/2, 200);
         
         
-        rect(300, 300, 200, 100);
-        fill(0);
+        image(sensor, 10, 10, width, height);
         
         
         textSize(16);
@@ -58,6 +59,7 @@ function draw() {
         // theme
         image(Happyface, 0, 0, width, height);
         image(Sadface, 0, 0, width, height);
+        image(sensor, 0, 0, width, height);
         text("Mood", width/2, height/2);
 
 
