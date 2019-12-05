@@ -59,7 +59,7 @@ function draw() {
         // theme
         image(Happyface, 0, 0, width, height);
         image(Sadface, 0, 0, width, height);
-        text("Mood", width/2, height/2);
+        text("When you hover over the sensor, the face changes mood", width/2, height/2);
 
 
     }
