@@ -62,7 +62,7 @@ function draw() {
 
         image(Happyface, 0, 0, width, height);
         image(Sadface, 0, 0, width, height);
-        text("When you hover over the sensor, the face changes mood", width/2, height/2);
+        text("When you hover over the sensor, the face gets happy, because your interacting with it, for example when you go inside a place and pass the door, it gets happy because you came in", width/2, height/2);
 
 
     }
