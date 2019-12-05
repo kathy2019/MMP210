@@ -36,7 +36,7 @@ function draw() {
         text("Final Project Pitch", width/2, height/2);
         
         textSize(30);
-        text("by Katherine", width/2, height/2 + 50);
+        text("by Katherine and Lan.cui", width/2, height/2 + 50);
         
     } else if (slideNumber == 1) {
         // content for slide number 1
