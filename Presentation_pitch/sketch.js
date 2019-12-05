@@ -44,7 +44,7 @@ function draw() {
         fill("black");
         textSize(50);
         textAlign(BOTTOM, BOTTOM);
-        text("IR Sensor", width/2, 200);
+        text("IR Sensor", width/2, 100);
         
         
         image(sensor, 200, 200, width/2, height/2);
