@@ -3,12 +3,13 @@ var totalSlides = 3;
 
 var nextBtnX = 700;
 var nextBtnY = 500;
-var nextBtnSize = 50;
+var nextBtnSize = 70;
 
-var prevBtnX = 100;
+var prevBtnX = 150;
 var prevBtnY = 500;
-var prevBtnW = 100;
+var prevBtnW = 50;
 var prevBtnH = 50;
+var prevBtnSize = 70;
 
 var Happyface;
 var Sadface;
@@ -41,22 +42,25 @@ function draw() {
         fill(255);
         textSize(50);
         textAlign(CENTER, CENTER);
-        text("FSR", width/2, 200);
+        text("IR Sensor", width/2, 200);
         
-        ellipse(200, 400, 100);
-        rect(200, 375, 200, 50);
+        
+        rect(300, 300, 200, 100);
         fill(0);
-        ellipse(200, 400, 80);
         
-        textSize(20);
-        text("The user hits the FSR to eject the cats from the litter box.", width/2, height - 100);
+        
+        textSize(16);
+        textAlign(TOP, CENTER);
+        text(" The person hovers over the IR Sensor and it will change the mood.", width/2, height - 100);
     
     } else if (slideNumber == 2) {
         
         // theme
         image(Happyface, 0, 0, width, height);
         image(Sadface, 0, 0, width, height);
-        text("Theme", width/2, height/2);
+        text("Mood", width/2, height/2);
+
+
     }
     
     
@@ -68,7 +72,7 @@ function draw() {
         noStroke();
         ellipse(nextBtnX, nextBtnY, nextBtnSize);
         fill(0);
-        textSize(20);
+        textSize(16);
         textAlign(CENTER, CENTER);
         text("Next", nextBtnX, nextBtnY);
     }
@@ -78,10 +82,10 @@ function draw() {
     if (slideNumber > 0) {
        fill(255);
         noStroke();
-        rect(prevBtnX, prevBtnY, prevBtnW, prevBtnH);
+        ellipse(prevBtnX, prevBtnY, prevBtnW, prevBtnH);
         fill(0);
-        textSize(20);
-        textAlign(LEFT, TOP);
+        textSize(16);
+        textAlign(CENTER, CENTER);
         text("Previous", prevBtnX + 10, prevBtnY + 10);  
     }
    
