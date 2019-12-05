@@ -43,15 +43,15 @@ function draw() {
         
         fill("black");
         textSize(50);
-        textAlign(CENTER, CENTER);
+        textAlign(TOP, CENTER);
         text("IR Sensor", width/2, 200);
         
         
-        image(sensor, 10, 10, width, height);
+        image(sensor, 200, 200, width/2, height/2);
         
         
         textSize(16);
-        textAlign(TOP, CENTER);
+        textAlign(TOP, TOP);
         text(" The person hovers over the IR Sensor and it will change the mood.", width/2, height - 100);
     
     } else if (slideNumber == 2) {
