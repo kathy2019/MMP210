@@ -52,7 +52,6 @@ function draw() {
         
         textSize(16);
         textAlign(TOP, CENTER);
-        textcolor("black");
         text(" The person hovers over the IR Sensor and it will change the mood.", width/2, height - 100);
     
     } else if (slideNumber == 2) {
