@@ -57,6 +57,9 @@ function draw() {
     } else if (slideNumber == 2) {
         
         // theme
+        var happyemojiY = 0;
+        var sademoji = height/2;
+
         image(Happyface, 0, 0, width, height);
         image(Sadface, 0, 0, width, height);
         text("When you hover over the sensor, the face changes mood", width/2, height/2);
