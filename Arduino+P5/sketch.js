@@ -7,7 +7,11 @@ var serial;
 var portName = "/dev/tty.usbmodem14101";
 var sensorValue;
 var happyface;
+var laugh;
 
+function preload() {
+    laugh = loadSound("laugh.mp3");
+}
 
 function setup() {
     createCanvas(640, 360);
@@ -45,49 +49,62 @@ function serialEvent() {
         return;
     }
     sensorValue = currentString;
-        console.log(sensorValue);
 
 }
 
 
 function draw() {
-    var c = map(sensorValue, 0, 1023, 0, 180);
+    var c = map(sensorValue, 300, 1023, 0, 180);
 
+   if (sensorValue < 400) {
+       
+    background("red");
+     } else {
+      
     
-   
-    // sky
-    background(c, c, c + 85);
+     background("#039dfc");
+    }
     
     var y = map(sensorValue, 0, 1023, height, 10);
+    var x = map(sensorValue, 0, 1023, height, 10);
     
-    fill('pink');
     noStroke();
-    ellipse(50, y, 60);
     fill("pink");
-    fill("plum");
-    ellipse(200, 180, 350, 350);
+    fill("#fcba03");
+    ellipse(300, 180, 350, 350);
     
     // eyes
-    fill("navy");
+    fill("black");
     strokeWeight(5);
-    ellipse(150, 150, 70, 70);
     ellipse(250, 150, 70, 70);
-    fill("lavender");
-    arc(200, 250, 100, 100, 0, PI)
+    ellipse(350, 150, 70, 70);
+  
     
+
     // pupils
     fill("lavender");
-    ellipse(150, 150, 30, 30);
     ellipse(250, 150, 30, 30);
+    ellipse(350, 150, 30, 30);
 
     // mouth
-    stroke("navy");
-    noFill()
-    strokeWeight(5);
+    stroke("black");
+    noStroke();
+    fill("red");
+
+    if (sensorValue < 400) {
+         arc(300, 250, 100, 100, 0, PI);
+     } else {
+        arc(300, 280, y+50, 90, PI, TWO_PI);
+     }
+
+
+}
 
 
 
-
-
-
+function mousePressed() {
+    if (mouseX > 0 && mouseX < width && 
+        mouseY > 0 && mouseY < height) {
+        laugh.play();
+    }
 }
